@@ -1,0 +1,92 @@
+@model BPKB.MVC.Tables.tr_bpkb
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>tr_bpkb</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="agreement_number" class="control-label"></label>
+                <input asp-for="agreement_number" class="form-control" />
+                <span asp-validation-for="agreement_number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="branch_id" class="control-label"></label>
+                <input asp-for="branch_id" class="form-control" />
+                <span asp-validation-for="branch_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bpkb_no" class="control-label"></label>
+                <input asp-for="bpkb_no" class="form-control" />
+                <span asp-validation-for="bpkb_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bpkb_date_in" class="control-label"></label>
+                <input asp-for="bpkb_date_in" class="form-control" />
+                <span asp-validation-for="bpkb_date_in" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bpkb_date" class="control-label"></label>
+                <input asp-for="bpkb_date" class="form-control" />
+                <span asp-validation-for="bpkb_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="faktur_no" class="control-label"></label>
+                <input asp-for="faktur_no" class="form-control" />
+                <span asp-validation-for="faktur_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="faktur_date" class="control-label"></label>
+                <input asp-for="faktur_date" class="form-control" />
+                <span asp-validation-for="faktur_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="police_no" class="control-label"></label>
+                <input asp-for="police_no" class="form-control" />
+                <span asp-validation-for="police_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="location_id" class="control-label"></label>
+                <select asp-for="location_id" class ="form-control" asp-items="ViewBag.location_id"></select>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="created_by" class="control-label"></label>
+                <input asp-for="created_by" class="form-control" />
+                <span asp-validation-for="created_by" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="created_on" class="control-label"></label>
+                <input asp-for="created_on" class="form-control" />
+                <span asp-validation-for="created_on" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="last_updated_by" class="control-label"></label>
+                <input asp-for="last_updated_by" class="form-control" />
+                <span asp-validation-for="last_updated_by" class="text-danger"></span>
+            </div>
+            <div class="form-group" hidden>
+                <label asp-for="last_updated_on" class="control-label"></label>
+                <input asp-for="last_updated_on" class="form-control" />
+                <span asp-validation-for="last_updated_on" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

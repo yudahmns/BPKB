@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "rteBm0hK5AbUrjkg1gMHEy+aUQqWnZjYqeZGDzgaWNA=",
+  "Source": "BPKB.API",
+  "BasePath": "_content/BPKB.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
